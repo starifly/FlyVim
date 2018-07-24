@@ -1,0 +1,12 @@
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Plug 'liuchengxu/eleline.vim'
+
+" Plug 'miyakogi/seiya.vim'
+
+" 展示开始画面，显示最近编辑过的文件
+Plug 'mhinz/vim-startify'
+
+" 一次性安装一大堆 colorscheme
+" Plug 'flazz/vim-colorschemes'

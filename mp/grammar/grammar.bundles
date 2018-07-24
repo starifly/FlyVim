@@ -1,0 +1,3 @@
+" LanguageTool 语法检查
+
+Plug 'rhysd/vim-grammarous'

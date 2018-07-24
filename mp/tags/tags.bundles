@@ -1,0 +1,13 @@
+" 自动生成 ctags/gtags，并提供自动索引功能
+" 不在 git/svn 内的项目，需要在项目根目录 touch 一个空的 .root 文件
+" 详细用法见：https://zhuanlan.zhihu.com/p/36279445
+
+" 提供 ctags/gtags 后台数据库自动更新功能
+Plug 'ludovicchabant/vim-gutentags', { 'on': [] }
+call timer_start(750, 'FlyVim#defer#tags')
+
+" 提供 GscopeFind 命令并自动处理好 gtags 数据库切换
+" 支持光标移动到符号名上：<leader>cg 查看定义，<leader>cs 查看引用
+Plug 'skywind3000/gutentags_plus', { 'on': [] }
+
+" Plug 'jsfaint/gen_tags.vim'

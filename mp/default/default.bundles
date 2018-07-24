@@ -1,0 +1,12 @@
+" 全文快速移动，<leader><leader>f{char} 即可触发
+Plug 'easymotion/vim-easymotion', { 'on': [] }
+
+" 文件浏览器，代替 netrw
+Plug 'justinmk/vim-dirvish'
+
+" 表格对齐，使用命令 Tabularize
+Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
+
+" Diff 增强，支持 histogram / patience 等更科学的 diff 算法
+Plug 'chrisbra/vim-diff-enhanced', { 'on': ['PatienceDiff', 'EnhancedDiff'] }
+

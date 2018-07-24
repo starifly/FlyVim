@@ -1,0 +1,33 @@
+" 文件类型扩展
+
+" powershell 脚本文件的语法高亮
+" Plug 'pprovost/vim-ps1', { 'for': 'ps1' }
+
+" lua 语法高亮增强
+" Plug 'tbastos/vim-lua', { 'for': 'lua' }
+
+" C++ 语法高亮增强，支持 11/14/17 标准
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
+
+" 额外语法文件
+Plug 'justinmk/vim-syntax-extra', { 'for': ['c', 'bison', 'flex'] }
+
+" python 语法文件增强
+" Plug 'vim-python/python-syntax', { 'for': ['python'] }
+
+" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+
+" Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" rust 语法增强
+" Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+
+" vim org-mode
+" Plug 'jceb/vim-orgmode', { 'for': 'org' }
+
+" html & css
+" Plug 'mattn/emmet-vim', { 'for': 'html' }
+" Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
+

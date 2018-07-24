@@ -1,0 +1,2 @@
+Plug 'w0rp/ale', { 'on': [] }
+call timer_start(400, 'FlyVim#defer#ale')

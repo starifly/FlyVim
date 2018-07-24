@@ -1,0 +1,15 @@
+Plug 'Valloric/YouCompleteMe' ", { 'on': [] }
+" call timer_start(1, 'Delayloadycm')
+
+" Usage: ./config_gen.py PROJECT_DIRECTORY
+" or invoke it from within Vim using the :YcmGenerateConfig
+Plug 'rdnetto/YCM-Generator', { 'on': ['YcmGenerateConfig', 'CCGenerateConfig'], 'branch': 'stable'  }
+
+" snippets
+Plug 'SirVer/ultisnips', { 'on': [] }
+Plug 'honza/vim-snippets', { 'on': [] }
+aug loadSnips
+  autocmd!
+  autocmd InsertEnter * call plug#load('ultisnips', 'vim-snippets')
+              \| autocmd! loadSnips
+aug END
