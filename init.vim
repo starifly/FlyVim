@@ -21,6 +21,10 @@ set runtimepath+=$VIMFILES/core
 " 将 ~/.vim 目录加入 runtimepath (有时候 vim 不会自动帮你加入）
 set rtp+=~/.vim
 
+if has('win32')
+  set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+endif
+
 
 "----------------------------------------------------------------------
 " 模块加载
@@ -45,5 +49,4 @@ LoadScript init/style.vim
 LoadScript init/keymaps.vim
 
 " Plugin Configuration
-so $flyvim_root/mp/plugin-config.vim
-
+LoadScript mp/plugin-config.vim
