@@ -7,8 +7,7 @@ endfunction
 
 " 200
 function! FlyVim#defer#basic(timer) abort
-  call s:lod('vim-misc', 'vim-signify', 'errormarker.vim',
-              \    'vim-choosewin', 'vim-preview')
+  call s:lod('vim-misc', 'vim-signify', 'errormarker.vim')
 endfunction
 
 " 300
