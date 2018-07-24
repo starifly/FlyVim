@@ -26,7 +26,7 @@ call plug#begin(FlyVimBundleDir(''))
 
 if exists('g:bundle_groups')
     for $bundle_group in g:bundle_groups
-        source $flyvim_root/mp/$bundle_group/$bundle_group.bundles
+        so $flyvim_root/mp/$bundle_group/$bundle_group.bundles
     endfor
 endif
 
