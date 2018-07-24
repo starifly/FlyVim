@@ -86,4 +86,6 @@ Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', '<Plug>(LiveEasyAl
 Plug 'justinmk/vim-sneak', { 'on': [] }
 call timer_start(600, 'FlyVim#defer#motion')
 
-Plug 'sarrow104/simple-cmake.vim'
+" Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
+
+" Plug 'sarrow104/simple-cmake.vim'
