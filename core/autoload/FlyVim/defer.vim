@@ -5,10 +5,15 @@ function! s:lod(...)
   endfor
 endfunction
 
-" 300
+" 200
 function! FlyVim#defer#basic(timer) abort
   call s:lod('vim-misc', 'vim-signify', 'errormarker.vim',
               \    'vim-choosewin', 'vim-preview')
+endfunction
+
+" 300
+function! FlyVim#defer#basic2(timer) abort
+  call s:lod('vim-choosewin', 'vim-preview')
 endfunction
 
 " 400
