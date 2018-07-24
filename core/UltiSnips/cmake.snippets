@@ -1,0 +1,7 @@
+priority -50
+
+snippet if "if (...)" !b
+IF (${1:NOT AND OR COMMAND DEFINED EXISTS IS_DIRECTORY IS_ABSOLUTE IS_NEWER_THEN MATCHES})
+    ${2:STATEMENT}
+ENDIF($1)
+endsnippet

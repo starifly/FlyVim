@@ -1,0 +1,104 @@
+" 用 v 选中一个区域后，ALT_+/- 按分隔符扩大/缩小选区
+Plug 'terryma/vim-expand-region'
+
+" 快速文件搜索
+Plug 'junegunn/fzf', { 'on': [] }
+Plug 'junegunn/fzf.vim', { 'on': [] }
+call timer_start(600, 'FlyVim#defer#fzf')
+
+" 给不同语言提供字典补全，插入模式下 c-x c-k 触发
+Plug 'asins/vim-dict'
+
+" 使用 :FlyGrep 命令进行实时 grep
+Plug 'wsdjeg/FlyGrep.vim', { 'on': 'FlyGrep' }
+
+" 使用 :CtrlSF 命令进行模仿 sublime 的 grep
+Plug 'dyng/ctrlsf.vim'
+
+" FIX: shortcuts conflict with leaderf
+" Plug 'terryma/vim-multiple-cursors'
+
+" 配对括号和引号自动补全
+Plug 'Raimondi/delimitMate'
+
+" 提供 gist 接口
+Plug 'lambdalisue/vim-gista', { 'on': 'Gista' }
+
+" 自动增加、替换配对符
+Plug 'tpope/vim-surround'
+
+" 重复上一次操作
+Plug 'tpope/vim-repeat'
+
+" if/end/endif/endfunction补全
+Plug 'tpope/vim-endwise'
+
+" 字符搜索
+if has('patch-8.0.1238')
+	Plug 'osyo-manga/vim-anzu', { 'on': ['<Plug>(anzu-n-with-echo)', '<Plug>(anzu-N-with-echo)'] }
+else
+	if !g:FlyVim.nvim
+		MP 'haya14busa/incsearch.vim',       { 'on': [
+					\ '<Plug>(incsearch-forward)',
+					\ '<Plug>(incsearch-backward)',
+					\ '<Plug>(incsearch-stay)' ]
+					\ }
+	endif
+endif
+
+" vim-markdown
+" Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+
+" markdown实时预览
+" Plug 'iamcco/markdown-preview.vim', { 'on': 'MarkdownPreview' }
+
+" 显示git提交记录
+Plug 'junegunn/gv.vim', { 'on': [ 'GV', 'GV!' ] }
+
+" 展开项目的Git Tree
+Plug 'gregsexton/gitv', { 'on': ['Gitv'] }
+
+" 优化搜索，移动光标后清除高亮
+" Plug 'junegunn/vim-slash'
+Plug 'romainl/vim-cool'
+
+" vim-smooth-scroll
+Plug 'terryma/vim-smooth-scroll'
+
+" 强化f和F键
+Plug 'rhysd/clever-f.vim', { 'on': [] }
+
+" ack，用命令Grep
+" Plug 'mileszs/ack.vim'
+
+" indentLine
+Plug 'Yggdroot/indentLine'
+
+" 撤销树
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
+
+" 代码排版，格式化
+Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', '<Plug>(LiveEasyAlign)'] }
+
+" Plug 'tweekmonster/startuptime.vim', { 'on': 'StartupTime' }
+
+" 成对匹配
+" Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'LaTeX'] }
+
+" Tab management for Vim
+" Plug 'kien/tabman.vim'
+
+" 支持多行f和F进行跳转
+Plug 'justinmk/vim-sneak', { 'on': [] }
+call timer_start(700, 'FlyVim#defer#motion')
+
+" auto strip whitespace except for file with extention blacklisted
+Plug 'ntpeters/vim-better-whitespace', { 'on': [] }
+call timer_start(800, 'FlyVim#defer#whitespace')
+
+" Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
+
+" Plug 'sarrow104/simple-cmake.vim'
+
+" 浮动终端
+Plug 'voldikss/vim-floaterm', { 'on': 'FloatermToggle' }

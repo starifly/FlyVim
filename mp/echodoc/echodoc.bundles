@@ -1,0 +1,5 @@
+" echodoc：搭配 YCM/deoplete 在底部显示函数参数
+
+Plug 'Shougo/echodoc.vim', { 'on': [] }
+call timer_start(900, 'FlyVim#defer#echodoc')
+

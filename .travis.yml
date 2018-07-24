@@ -1,0 +1,61 @@
+language: c
+
+sudo: required
+dist: trusty
+
+compiler:
+  - clang
+  - gcc
+
+notifications:
+  email:
+    recipients:
+      - ${U_EMAIL}
+    on_success: never # default: change
+    on_failure: never # default: always
+
+addons:
+  apt:
+    packages:
+      - shellcheck
+      - autoconf
+      - clang
+      - lcov
+      - libncurses5-dev
+      - libgnome2-dev
+      - libgnomeui-dev
+      - libgtk2.0-dev
+      - libatk1.0-dev
+      - libbonoboui2-dev
+      - libcairo2-dev
+      - libx11-dev
+      - libxpm-dev
+      - libxt-dev
+      - python-dev
+      - python3-dev
+      - ruby-dev
+      - lua5.1
+      - liblua5.1-dev
+      - tcl-dev
+      - cscope
+      - libperl-dev
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get remove --purge vim-tiny vim vim-runtime gvim vim-common vim-gui-common vim-nox
+  - git clone https://github.com/vim/vim.git
+  - cd vim
+  - ./configure --with-features=huge --enable-multibyte --enable-python3interp --enable-perlinterp --enable-luainterp --enable-gui=gtk2 --enable-cscope --prefix=/usr/local
+  - make
+  - sudo make install
+  - vim --version
+  - cd ../
+
+script:
+  - shellcheck *.sh
+  - chmod +x install.sh
+  - ./install.sh
+
+branches:
+  only:
+    - master

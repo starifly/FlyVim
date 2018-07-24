@@ -1,0 +1,15 @@
+" LeaderF：CtrlP / FZF 的超级代替者，文件模糊匹配，tags/函数名 选择
+
+" 如果 vim 支持 python 则启用  Leaderf
+if has('python') || has('python3')
+    Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+    Plug 'Yggdroot/LeaderF-marks', { 'on': 'LeaderfMarks' }
+else
+    " 不支持 python ，使用 CtrlP 代替
+    Plug 'ctrlpvim/ctrlp.vim'
+
+    " 显示函数列表的扩展插件
+    Plug 'tacahiroy/ctrlp-funky'
+
+endif
+

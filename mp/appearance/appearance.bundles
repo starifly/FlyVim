@@ -1,0 +1,30 @@
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+
+" Plug 'liuchengxu/eleline.vim'
+
+Plug 'itchyny/lightline.vim'
+Plug 'maximbaz/lightline-ale'
+Plug 'taohexxx/lightline-solarized'
+Plug 'taohexxx/lightline-buffer'
+Plug 'dhruvasagar/vim-table-mode'
+
+" Plug 'miyakogi/seiya.vim'
+
+" 展示开始画面，显示最近编辑过的文件
+Plug 'mhinz/vim-startify', { 'on': 'Startify' }
+aug load_start
+  autocmd!
+  autocmd VimEnter *
+              \   if !argc()
+              \|    call plug#load('vim-startify')
+              \|    silent! Startify
+              \|  endif
+aug END
+
+" 一次性安装一大堆 colorscheme
+" Plug 'flazz/vim-colorschemes'
+
+" Plug 'liuchengxu/space-vim-dark'
+
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }

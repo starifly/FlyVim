@@ -1,0 +1,19 @@
+Plug 'Valloric/YouCompleteMe', { 'do': function('FlyVim#plug#youcompleteme#build')  }
+aug load_ycm
+    autocmd!
+    autocmd CursorHold,CursorHoldI,InsertEnter * call youcompleteme#Enable()
+                \| autocmd! load_ycm
+aug END
+
+" Usage: ./config_gen.py PROJECT_DIRECTORY
+" or invoke it from within Vim using the :YcmGenerateConfig
+Plug 'rdnetto/YCM-Generator', { 'on': ['YcmGenerateConfig', 'CCGenerateConfig'], 'branch': 'stable'  }
+
+" snippets
+" Plug 'SirVer/ultisnips', { 'on': [] }
+" Plug 'honza/vim-snippets', { 'on': [] }
+" aug load_snips
+"     autocmd!
+"     autocmd InsertEnter * call plug#load('ultisnips', 'vim-snippets')
+"                 \| autocmd! load_snips
+" aug END
