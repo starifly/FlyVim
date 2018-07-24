@@ -10,7 +10,5 @@ if isdirectory(expand(FlyVimBundleDir("vim-sneak")))
         autocmd VimEnter,ColorScheme * :hi Sneak guifg=black ctermfg=black guibg=#FFE53D ctermbg=003
     aug END
 
-    " Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
-    Plug 'sarrow104/simple-cmake.vim'
 endif
 
