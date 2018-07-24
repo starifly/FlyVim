@@ -11,13 +11,14 @@ Plug 'mhinz/vim-signify', { 'on': [] }
 " 根据 quickfix 中匹配到的错误信息，高亮对应文件的错误行
 " 使用 :RemoveErrorMarkers 命令或者 <space>ha 清除错误
 Plug 'mh21/errormarker.vim', { 'on': [] }
+call timer_start(200, 'FlyVim#defer#basic')
 
 " 使用 ALT+e 会在不同窗口/标签上显示 A/B/C 等编号，然后字母直接跳转
 Plug 't9md/vim-choosewin', { 'on': [] }
 
 " 提供基于 TAGS 的定义预览，函数参数预览，quickfix 预览
 Plug 'skywind3000/vim-preview', { 'on': [] }
-call timer_start(300, 'FlyVim#defer#basic')
+call timer_start(300, 'FlyVim#defer#basic2')
 
 " Git 支持
 Plug 'tpope/vim-fugitive', { 'on': [] }
