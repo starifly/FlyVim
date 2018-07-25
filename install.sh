@@ -110,7 +110,7 @@ install_for_vim() {
   ret="$?"
   success "Successfully downloaded vim-plug"
 
-  ln -sf "$HOME/.FlyVim/.vimrc" "$HOME/.vimrc"
+  ln -sf "$HOME/.FlyVim/vimrc" "$HOME/.vimrc"
 
   install_plugins "vim"
 }
@@ -124,7 +124,7 @@ install_for_neovim() {
   success "Successfully downloaded vim-plug"
 
   mkdir -p "$HOME/.config/nvim"
-  ln -sf "$HOME/.FlyVim/.vimrc" "$HOME/.config/nvim/init.vim"
+  ln -sf "$HOME/.FlyVim/vimrc" "$HOME/.config/nvim/init.vim"
 
   install_plugins "nvim"
 }
