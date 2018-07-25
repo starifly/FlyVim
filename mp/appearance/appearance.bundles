@@ -10,3 +10,5 @@ Plug 'mhinz/vim-startify'
 
 " 一次性安装一大堆 colorscheme
 " Plug 'flazz/vim-colorschemes'
+
+Plug 'liuchengxu/space-vim-dark'
