@@ -31,22 +31,22 @@ endif
 "----------------------------------------------------------------------
 
 " Functions
-LoadScript init/functions.vim
+LoadScript spaces/functions.vim
 
 " 加载基础配置
-LoadScript init/basic.vim
+LoadScript spaces/basic.vim
 
 " 加载扩展配置
-LoadScript init/config.vim
+LoadScript spaces/config.vim
 
 " 插件加载
-LoadScript init/plugins.vim
+LoadScript spaces/plugins.vim
 
 " 界面样式
-LoadScript init/style.vim
+LoadScript spaces/style.vim
 
 " 自定义按键
-LoadScript init/keymaps.vim
+LoadScript spaces/keymaps.vim
 
 " Plugin Configuration
 LoadScript mp/plugin-config.vim
