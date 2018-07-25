@@ -4,7 +4,7 @@ Plug 'terryma/vim-expand-region'
 " 快速文件搜索
 Plug 'junegunn/fzf', { 'on': [] }
 Plug 'junegunn/fzf.vim', { 'on': [] }
-call timer_start(700, 'FlyVim#defer#fzf')
+call timer_start(600, 'FlyVim#defer#fzf')
 
 " 给不同语言提供字典补全，插入模式下 c-x c-k 触发
 Plug 'asins/vim-dict'
@@ -67,10 +67,6 @@ Plug 'Yggdroot/indentLine'
 " 撤销树
 " Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 
-" auto strip whitespace except for file with extention blacklisted
-Plug 'ntpeters/vim-better-whitespace', { 'on': [] }
-call timer_start(1000, 'FlyVim#defer#whitespace')
-
 " 代码排版，格式化
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', '<Plug>(LiveEasyAlign)'] }
 
@@ -84,7 +80,11 @@ Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', '<Plug>(LiveEasyAl
 
 " 支持多行f和F进行跳转
 Plug 'justinmk/vim-sneak', { 'on': [] }
-call timer_start(600, 'FlyVim#defer#motion')
+call timer_start(700, 'FlyVim#defer#motion')
+
+" auto strip whitespace except for file with extention blacklisted
+Plug 'ntpeters/vim-better-whitespace', { 'on': [] }
+call timer_start(800, 'FlyVim#defer#whitespace')
 
 " Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
 

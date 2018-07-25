@@ -3,15 +3,14 @@ Plug 'xolox/vim-misc', { 'on': [] }
 
 " 用于在侧边符号栏显示 marks （ma-mz 记录的位置）
 Plug 'kshenoy/vim-signature', { 'on': [] }
-call timer_start(500, 'FlyVim#defer#signature')
 
 " 用于在侧边符号栏显示 git/svn 的 diff
 Plug 'mhinz/vim-signify', { 'on': [] }
+call timer_start(200, 'FlyVim#defer#basic')
 
 " 根据 quickfix 中匹配到的错误信息，高亮对应文件的错误行
 " 使用 :RemoveErrorMarkers 命令或者 <space>ha 清除错误
 Plug 'mh21/errormarker.vim', { 'on': [] }
-call timer_start(200, 'FlyVim#defer#basic')
 
 " 使用 ALT+e 会在不同窗口/标签上显示 A/B/C 等编号，然后字母直接跳转
 Plug 't9md/vim-choosewin', { 'on': [] }
@@ -22,7 +21,7 @@ call timer_start(300, 'FlyVim#defer#basic2')
 
 " Git 支持
 Plug 'tpope/vim-fugitive', { 'on': [] }
-call timer_start(800, 'FlyVim#defer#fugitive')
+call timer_start(400, 'FlyVim#defer#fugitive')
 
 " 显示文件类型图标
 " xshell下缩进有问题
