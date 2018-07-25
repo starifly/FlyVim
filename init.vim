@@ -7,16 +7,17 @@
 "
 "======================================================================
 
-" 防止重复加载
-if get(s:, 'loaded', 0) != 0
-    finish
-else
-    let s:loaded = 1
+if empty($flyvim_root)
+    let $flyvim_root = "~/.FlyVim"
 endif
 
-let $VIMFILES=fnamemodify(expand('<sfile>'), ":p:h")
-command! -nargs=1 LoadScript exec 'so '.$VIMFILES.'/'.'<args>'
-set runtimepath+=$VIMFILES/core
+if empty($bundle_root)
+    let $bundle_root = "~/.vim"
+endif
+
+
+command! -nargs=1 LoadScript exec 'so '.$flyvim_root.'/'.'<args>'
+set runtimepath+=$flyvim_root/core
 
 " 将 ~/.vim 目录加入 runtimepath (有时候 vim 不会自动帮你加入）
 set rtp+=~/.vim

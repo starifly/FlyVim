@@ -1,5 +1,5 @@
 APP           := FlyVim
-INIT_VIM      := ~/.FlyVim/vimrc
+INIT_VIM      := ~/.FlyVim/init.vim
 VIMRC         := ~/.vimrc
 NVIMRC        := ~/.config/nvim/init.vim
 
