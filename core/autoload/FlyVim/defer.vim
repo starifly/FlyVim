@@ -50,3 +50,7 @@ function! FlyVim#defer#echodoc(timer) abort
   call s:lod('echodoc.vim')
 endfunction
 
+" 1000
+function! FlyVim#defer#ycm(timer) abort
+  call s:lod('YouCompleteMe')
+endfunction

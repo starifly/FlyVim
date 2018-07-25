@@ -1,5 +1,5 @@
-Plug 'Valloric/YouCompleteMe' ", { 'on': [] }
-" call timer_start(1, 'Delayloadycm')
+Plug 'Valloric/YouCompleteMe', { 'on': [] }
+call timer_start(1000, 'FlyVim#defer#ycm')
 
 " Usage: ./config_gen.py PROJECT_DIRECTORY
 " or invoke it from within Vim using the :YcmGenerateConfig
