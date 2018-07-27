@@ -44,22 +44,22 @@ endif
 "----------------------------------------------------------------------
 
 " Functions
-LoadScript spaces/functions.vim
+LoadScript personal/functions.vim
 
 " 加载基础配置
-LoadScript spaces/basic.vim
+LoadScript personal/basic.vim
 
 " 加载扩展配置
-LoadScript spaces/config.vim
+LoadScript personal/config.vim
 
 " 插件加载
-LoadScript spaces/plugins.vim
+LoadScript personal/plugins.vim
 
 " 界面样式
-LoadScript spaces/style.vim
+LoadScript personal/style.vim
 
 " 自定义按键
-LoadScript spaces/keymaps.vim
+LoadScript personal/keymaps.vim
 
 " Plugin Configuration
 LoadScript mp/plugin-config.vim
