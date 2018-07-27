@@ -106,6 +106,7 @@ set display=lastline
 
 " allow the below display directories
 set wildmenu
+set wildmode=longest,list,full
 
 " delayed draw (boost performance)
 set lazyredraw
