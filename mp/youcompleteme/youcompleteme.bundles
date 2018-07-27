@@ -9,7 +9,7 @@ Plug 'rdnetto/YCM-Generator', { 'on': ['YcmGenerateConfig', 'CCGenerateConfig'],
 Plug 'SirVer/ultisnips', { 'on': [] }
 Plug 'honza/vim-snippets', { 'on': [] }
 aug loadSnips
-  autocmd!
-  autocmd InsertEnter * call plug#load('ultisnips', 'vim-snippets')
-              \| autocmd! loadSnips
+    autocmd!
+    autocmd InsertEnter * call plug#load('ultisnips', 'vim-snippets')
+                \| autocmd! loadSnips
 aug END
