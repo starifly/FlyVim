@@ -16,11 +16,16 @@ if empty($bundle_root)
 endif
 
 
+" Platform
 let g:FlyVim = get(g:, 'FlyVim', {})
 let g:FlyVim.os = {}
 let g:FlyVim.os.mac = has('macunix')
 let g:FlyVim.os.linux = has('unix') && !has('macunix') && !has('win32unix')
 let g:FlyVim.os.windows = has('win32')
+
+let g:FlyVim.nvim = has('nvim') && exists('*jobwait') && !g:FlyVim.os.windows
+let g:FlyVim.vim8 = exists('*job_start')
+let g:FlyVim.timer = exists('*timer_start')
 
 
 command! -nargs=1 LoadScript exec 'so '.$flyvim_root.'/'.'<args>'
