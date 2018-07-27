@@ -37,6 +37,8 @@ set showcmd
 
 " 水平切割窗口时，默认在右边显示新窗口
 set splitright
+" 垂直切割窗口时，默认在下边显示新窗口
+set splitbelow
 
 set scrolloff=1
 set scrolljump=2
