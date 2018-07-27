@@ -76,10 +76,10 @@ aug numbertoggle
     autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
     autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
 
-    autocmd BufReadPost *
-                \ if line('$') > 2800
-                \|  silent! set norelativenumber
-                \|endif
+    " autocmd BufReadPost *
+    "             \ if line('$') > 2800
+    "             \|  silent! set norelativenumber
+    "             \|endif
 aug END
 
 
