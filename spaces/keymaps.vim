@@ -41,12 +41,16 @@ inoremap <C-l> <right>
 
 
 "----------------------------------------------------------------------
-" quickly close & save
+" quickly quit & save
 "----------------------------------------------------------------------
-nnoremap <m-q> :q<cr>
-inoremap <m-q> <esc>:q<cr>
-nnoremap <m-w> :w<cr>
-inoremap <m-w> <esc>:w<cr>
+" quit
+nnoremap <m-q>  :q<cr>
+inoremap <m-q>  <esc>:q<cr>
+vnoremap <m-q>  <esc>
+nnoremap <m-Q> :qa!<cr>
+" save
+nnoremap <m-w> :update<cr>
+inoremap <m-w> <C-O>:update<cr>
 
 
 "----------------------------------------------------------------------
