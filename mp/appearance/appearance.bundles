@@ -7,14 +7,14 @@ Plug 'vim-airline/vim-airline-themes'
 
 " 展示开始画面，显示最近编辑过的文件
 Plug 'mhinz/vim-startify', { 'on': 'Startify' }
-augroup spacevimStart
+aug load_start
   autocmd!
   autocmd VimEnter *
               \   if !argc()
               \|    call plug#load('vim-startify')
               \|    silent! Startify
               \|  endif
-augroup END
+aug END
 
 " 一次性安装一大堆 colorscheme
 " Plug 'flazz/vim-colorschemes'
