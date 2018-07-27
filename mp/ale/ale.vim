@@ -27,7 +27,7 @@ if isdirectory(expand(FlyVimBundleDir("ale")))
     let g:ale_lint_on_enter = 0 " for ale_lint_on_save = 1
 
     " 在 linux/mac 下降低语法检查程序的进程优先级（不要卡到前台进程）
-    if has('win32') == 0 && has('win64') == 0 && has('win32unix') == 0
+    if !g:FlyVim.os.windows && has('win32unix') == 0
         let g:ale_command_wrapper = 'nice -n5'
     endif
 

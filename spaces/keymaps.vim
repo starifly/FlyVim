@@ -298,7 +298,7 @@ nnoremap <silent> <F6> :AsyncRun -cwd=<root> -raw make test <cr>
 nnoremap <silent> <F4> :AsyncRun -cwd=<root> cmake . <cr>
 
 " Windows 下支持直接打开新 cmd 窗口运行
-if has('win32') || has('win64')
+if g:FlyVim.os.windows
 	nnoremap <silent> <F8> :AsyncRun -cwd=<root> -mode=4 make run <cr>
 endif
 
@@ -341,7 +341,7 @@ function! ExecuteFile()
 	" -raw: 输出内容直接显示到 quickfix window 不匹配 errorformat
 	" -save=2: 保存所有改动过的文件
 	" -cwd=$(VIM_FILEDIR): 运行初始化目录为文件所在目录
-	if has('win32') || has('win64')
+	if g:FlyVim.os.windows
 		exec 'AsyncRun -cwd=$(VIM_FILEDIR) -raw -save=2 -mode=4 '. cmd
 	else
 		exec 'AsyncRun -cwd=$(VIM_FILEDIR) -raw -save=2 -mode=0 '. cmd
@@ -360,7 +360,7 @@ if executable('rg')
 	noremap <silent><F2> :AsyncRun! -cwd=<root> rg -n --no-heading
 				\ --color never -g *.h -g *.c* -g *.py -g *.js -g *.vim
 				\ <C-R><C-W> "<root>" <cr>
-elseif has('win32') || has('win64')
+elseif g:FlyVim.os.windows
 	noremap <silent><F2> :AsyncRun! -cwd=<root> findstr /n /s /C:"<C-R><C-W>"
 				\ "\%CD\%\*.h" "\%CD\%\*.c*" "\%CD\%\*.py" "\%CD\%\*.js"
 				\ "\%CD\%\*.vim"
