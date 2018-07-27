@@ -33,8 +33,18 @@ Plug 'tpope/vim-repeat'
 " if/end/endif/endfunction补全
 Plug 'tpope/vim-endwise'
 
-" 模糊字符搜索插件
-Plug 'haya14busa/incsearch.vim'
+" 字符搜索
+if has('patch-8.0.1238')
+	Plug 'osyo-manga/vim-anzu', { 'on': ['<Plug>(anzu-n-with-echo)', '<Plug>(anzu-N-with-echo)'] }
+else
+	if !g:FlyVim.nvim
+		MP 'haya14busa/incsearch.vim',       { 'on': [
+					\ '<Plug>(incsearch-forward)',
+					\ '<Plug>(incsearch-backward)',
+					\ '<Plug>(incsearch-stay)' ]
+					\ }
+	endif
+endif
 
 " vim-markdown
 " Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
