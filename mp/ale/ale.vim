@@ -1,9 +1,6 @@
 if isdirectory(expand(FlyVimBundleDir("ale")))
     " let g:ale_linters_explicit = 1
 
-    " for include
-    let g:ale_c_parse_makefile = 1
-
     " 设定延迟和提示信息
     let g:ale_completion_delay = 500
     let g:ale_echo_delay = 20

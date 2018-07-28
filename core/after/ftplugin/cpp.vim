@@ -4,6 +4,9 @@ if exists("b:did_cpp_ftplugin")
 endif
 let b:did_cpp_ftplugin = 1
 
+" for include
+let b:ale_c_parse_makefile = 1
+
 let b:ale_linters = ['gcc', 'cppcheck']
 let b:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
 
