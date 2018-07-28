@@ -40,8 +40,9 @@ set splitright
 " 垂直切割窗口时，默认在下边显示新窗口
 set splitbelow
 
-set scrolloff=1
-set scrolljump=2
+set sidescroll=10
+set scrolloff=5
+" set scrolljump=2
 
 
 "----------------------------------------------------------------------
