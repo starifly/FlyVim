@@ -1,7 +1,7 @@
 Plug 'Valloric/YouCompleteMe'
 aug load_ycm
-	autocmd!
-	autocmd CursorHold,CursorHoldI,InsertEnter * call youcompleteme#Enable()
+    autocmd!
+    autocmd CursorHold,CursorHoldI,InsertEnter * call youcompleteme#Enable()
                 \| autocmd! load_ycm
 aug END
 
@@ -10,10 +10,10 @@ aug END
 Plug 'rdnetto/YCM-Generator', { 'on': ['YcmGenerateConfig', 'CCGenerateConfig'], 'branch': 'stable'  }
 
 " snippets
-Plug 'SirVer/ultisnips', { 'on': [] }
-Plug 'honza/vim-snippets', { 'on': [] }
-aug load_snips
-    autocmd!
-    autocmd InsertEnter * call plug#load('ultisnips', 'vim-snippets')
-                \| autocmd! load_snips
-aug END
+" Plug 'SirVer/ultisnips', { 'on': [] }
+" Plug 'honza/vim-snippets', { 'on': [] }
+" aug load_snips
+"     autocmd!
+"     autocmd InsertEnter * call plug#load('ultisnips', 'vim-snippets')
+"                 \| autocmd! load_snips
+" aug END
