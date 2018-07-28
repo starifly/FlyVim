@@ -7,8 +7,8 @@ if isdirectory(expand(FlyVimBundleDir("vim-signify")))
     let g:signify_sign_change            = '~'
     let g:signify_sign_changedelete      = g:signify_sign_change
 
-    " git 仓库使用 histogram 算法进行 diff
-    let g:signify_vcs_cmds = {
-                \ 'git': 'git diff --no-color --diff-algorithm=histogram --no-ext-diff -U0 -- %f',
-                \}
+    " " git 仓库使用 histogram 算法进行 diff
+    " let g:signify_vcs_cmds = {
+    "             \ 'git': 'git diff --no-color --diff-algorithm=histogram --no-ext-diff -U0 -- %f',
+    "             \}
 endif

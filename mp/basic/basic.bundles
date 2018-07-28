@@ -3,10 +3,11 @@ Plug 'xolox/vim-misc', { 'on': [] }
 
 " 用于在侧边符号栏显示 marks （ma-mz 记录的位置）
 Plug 'kshenoy/vim-signature', { 'on': [] }
+call timer_start(200, 'FlyVim#defer#basic')
 
 " 用于在侧边符号栏显示 git/svn 的 diff
 Plug 'mhinz/vim-signify', { 'on': [] }
-call timer_start(200, 'FlyVim#defer#basic')
+call timer_start(300, 'FlyVim#defer#signify')
 
 " 根据 quickfix 中匹配到的错误信息，高亮对应文件的错误行
 " 使用 :RemoveErrorMarkers 命令或者 <space>ha 清除错误
@@ -17,7 +18,7 @@ Plug 't9md/vim-choosewin', { 'on': [] }
 
 " 提供基于 TAGS 的定义预览，函数参数预览，quickfix 预览
 Plug 'skywind3000/vim-preview', { 'on': [] }
-call timer_start(300, 'FlyVim#defer#basic2')
+call timer_start(350, 'FlyVim#defer#basic2')
 
 " Git 支持
 Plug 'tpope/vim-fugitive', { 'on': [] }
