@@ -271,6 +271,12 @@ if &t_Co > 255
    endif
 end
 
+" vim-signify
+hi SignifySignAdd ctermfg=36 ctermbg=NONE cterm=NONE gui=NONE
+hi SignifySignChange ctermfg=178 ctermbg=NONE cterm=NONE gui=NONE
+hi SignifySignDelete ctermfg=160 ctermbg=NONE cterm=NONE gui=NONE
+hi SignifySignChangeDelete ctermfg=140 ctermbg=NONE cterm=NONE gui=NONE
+
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
