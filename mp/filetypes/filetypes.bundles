@@ -31,3 +31,4 @@ Plug 'justinmk/vim-syntax-extra', { 'for': ['c', 'bison', 'flex'] }
 " Plug 'mattn/emmet-vim', { 'for': 'html' }
 " Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 
+" Plug 'sheerun/vim-polyglot'
