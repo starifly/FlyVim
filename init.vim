@@ -30,6 +30,7 @@ let g:FlyVim.timer = exists('*timer_start')
 
 command! -nargs=1 LoadScript exec 'so '.$flyvim_root.'/'.'<args>'
 set runtimepath+=$flyvim_root/core
+set runtimepath+=$flyvim_root/core/after
 
 " 将 ~/.vim 目录加入 runtimepath (有时候 vim 不会自动帮你加入）
 set rtp+=~/.vim

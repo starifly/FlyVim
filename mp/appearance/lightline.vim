@@ -48,3 +48,5 @@ function! LightlineLinterOK() abort
     let l:all_non_errors = l:counts.total - l:all_errors
     return l:counts.total == 0 ? '✓ ' : ''
 endfunction
+
+" autocmd User ALELint call lightline#update()
