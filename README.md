@@ -3,7 +3,7 @@
 #### Quick Install
 
 ```bash
-$ bash <(curl -fsSL https://git.io/fNg5m)
+$ bash <(curl -fsSL https://git.io/fNg5a)
 ```
 #### Manual
 
