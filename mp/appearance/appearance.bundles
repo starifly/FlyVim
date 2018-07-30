@@ -5,6 +5,7 @@
 
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
+Plug 'mgee/lightline-bufferline'
 
 " Plug 'miyakogi/seiya.vim'
 
