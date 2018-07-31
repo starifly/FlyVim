@@ -3,7 +3,7 @@ Plug 'xolox/vim-misc', { 'on': [] }
 
 " 用于在侧边符号栏显示 marks （ma-mz 记录的位置）
 Plug 'kshenoy/vim-signature', { 'on': [] }
-call timer_start(200, 'FlyVim#defer#basic')
+call timer_start(250, 'FlyVim#defer#basic')
 
 " 用于在侧边符号栏显示 git/svn 的 diff
 Plug 'mhinz/vim-signify', { 'on': [] }

@@ -10,3 +10,5 @@ Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
 " Diff 增强，支持 histogram / patience 等更科学的 diff 算法
 Plug 'chrisbra/vim-diff-enhanced', { 'on': ['PatienceDiff', 'EnhancedDiff'] }
 
+Plug 'tpope/vim-unimpaired', { 'on': [] }
+call timer_start(200, 'FlyVim#defer#unimpaired')

@@ -6,6 +6,11 @@ function! s:lod(...)
 endfunction
 
 " 200
+function! FlyVim#defer#unimpaired(timer) abort
+  call s:lod('vim-unimpaired')
+endfunction
+
+" 250
 function! FlyVim#defer#basic(timer) abort
   call s:lod('vim-misc', 'vim-signature')
 endfunction
