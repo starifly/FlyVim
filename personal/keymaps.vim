@@ -96,8 +96,9 @@ map Y y$
 
 noremap ; :
 
+" quickfix中按v/x分屏打开
 autocmd BufReadPost quickfix nnoremap <buffer> v <C-w><Enter><C-w>L
-autocmd BufReadPost quickfix nnoremap <buffer> sp <C-w><Enter><C-w>K
+autocmd BufReadPost quickfix nnoremap <buffer> x <C-w><Enter><C-w>K
 
 
 "----------------------------------------------------------------------
@@ -194,7 +195,7 @@ noremap <silent> <leader>bp :bp<cr>
 " 其实还可以用原生的 CTRL+PageUp, CTRL+PageDown 来切换标签
 "----------------------------------------------------------------------
 
-noremap <silent> <leader>tc :tabnew+Startify<cr>
+noremap <silent> <c-t> :tabnew+Startify<cr>
 noremap <silent> <leader>tq :tabclose<cr>
 noremap <silent> <leader>tn :tabnext<cr>
 noremap <silent> <leader>tp :tabprev<cr>

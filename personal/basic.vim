@@ -24,6 +24,12 @@ set bs=eol,start,indent
 " auto indent
 set autoindent
 
+" smart tab
+set smarttab
+
+" faster redrawing
+set ttyfast
+
 " Windows disables ALT act-menu (making ALT available in Vim)
 set winaltkeys=no
 
@@ -39,6 +45,12 @@ set ttimeoutlen=50
 
 " display cursor position
 set ruler
+
+" 文件修改后自动重新读入
+set autoread
+
+" 不兼容vi模式
+set nocompatible
 
 
 "----------------------------------------------------------------------
