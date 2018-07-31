@@ -3,7 +3,7 @@
 " basic.vim - basic configuration, this configuration needs to be compatible
 " with vim tiny mode
 "
-" acceptable to everyone, without any keymap and preference settings
+" acceptable to everyone
 "
 " Created: 2018-07-23
 " URL: https://github.com/if2012/FlyVim

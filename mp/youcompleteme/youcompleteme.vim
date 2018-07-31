@@ -14,6 +14,7 @@ if isdirectory(expand(FlyVimBundleDir("YouCompleteMe")))
     " let g:ycm_add_preview_to_completeopt = 0
 
     " 禁用诊断功能：我们用前面更好用的 ALE 代替
+    let g:ycm_goto_buffer_command = 'horizontal-split'
     let g:ycm_show_diagnostics_ui = 0
     let g:ycm_server_log_level = 'info'
     let g:ycm_min_num_identifier_candidate_chars = 2

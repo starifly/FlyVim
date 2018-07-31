@@ -75,10 +75,29 @@ endif
 
 
 " ----------------------------------------------------------------------------
-" <tab> / <s-tab> | Circular windows navigation
+" Others
 " ----------------------------------------------------------------------------
+" <tab> / <s-tab> | Circular windows navigation
 nnoremap <tab>   <c-w>w
 nnoremap <S-tab> <c-w>W
+
+" Go to home and end using capitalized directions
+noremap H ^
+noremap L $
+
+" 调整缩进后自动选中，方便再次操作
+vnoremap < <gv
+vnoremap > >gv
+
+" 选中并高亮最后一次插入的内容
+nnoremap gv `[v`]`
+
+map Y y$
+
+noremap ; :
+
+autocmd BufReadPost quickfix nnoremap <buffer> v <C-w><Enter><C-w>L
+autocmd BufReadPost quickfix nnoremap <buffer> sp <C-w><Enter><C-w>K
 
 
 "----------------------------------------------------------------------
