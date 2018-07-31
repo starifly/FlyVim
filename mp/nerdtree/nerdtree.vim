@@ -30,6 +30,7 @@ if isdirectory(expand(FlyVimBundleDir("nerdtree")))
     let g:NERDTreeDirArrows = 1
     let g:NERDTreeHijackNetrw = 0
     noremap <space>nt :NERDTreeToggle<cr>
+    nnoremap <Leader>fd :NERDTreeFind<CR>
     let g:NERDTreeDirArrowExpandable = '▸'
     let g:NERDTreeDirArrowCollapsible = '▾'
 endif

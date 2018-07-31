@@ -188,6 +188,8 @@ endif
 "----------------------------------------------------------------------
 noremap <silent> <leader>bn :bn<cr>
 noremap <silent> <leader>bp :bp<cr>
+noremap <silent> <space>bd :bd<CR>
+noremap <silent> <space>bk :bw<CR>
 
 
 "----------------------------------------------------------------------

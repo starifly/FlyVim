@@ -15,7 +15,7 @@ Plug 'wsdjeg/FlyGrep.vim'
 " 使用 :CtrlSF 命令进行模仿 sublime 的 grep
 Plug 'dyng/ctrlsf.vim'
 
-" NOTICE: shortcuts conflict with leaderf
+" FIX: shortcuts conflict with leaderf
 " Plug 'terryma/vim-multiple-cursors'
 
 " 配对括号和引号自动补全
