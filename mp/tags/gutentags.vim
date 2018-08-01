@@ -40,6 +40,6 @@ if isdirectory(expand(FlyVimBundleDir("vim-gutentags")))
     " manually update tags, or open buffer will be stuck
     let g:gutentags_generate_on_missing = 0
     let g:gutentags_generate_on_new = 0
-    let g:gutentags_generate_on_write = 0
+    let g:gutentags_generate_on_write = 1
     nnoremap <leader>tg :GutentagsUpdate<CR>
 endif

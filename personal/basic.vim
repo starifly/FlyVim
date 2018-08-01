@@ -1,7 +1,6 @@
 "======================================================================
 "
-" basic.vim - basic configuration, this configuration needs to be compatible
-" with vim tiny mode
+" basic.vim - 基础配置，该配置需要兼容 vim tiny 模式
 "
 " acceptable to everyone
 "
@@ -12,10 +11,10 @@
 " vim: set ts=4 sw=4 tw=78 noet :
 
 "----------------------------------------------------------------------
-" basic setting
+" 基础设置
 "----------------------------------------------------------------------
 
-" disable vi compatibility mode
+" 不兼容vi模式
 set nocompatible
 
 " set Backspace key mode
@@ -30,17 +29,16 @@ set smarttab
 " faster redrawing
 set ttyfast
 
-" Windows disables ALT act-menu (making ALT available in Vim)
+" Windows 禁用 ALT 操作菜单（使得 ALT 可以用到 Vim里）
 set winaltkeys=no
 
 " disable auto wrap
 set nowrap
 
-" turn on the function key timeout detection
-" the function key under terminal is a strings starting with ESC
+" 打开功能键超时检测（终端下功能键为一串 ESC 开头的字符串）
 set ttimeout
 
-" function key timeout detection 50ms
+" 功能键超时检测 50 毫秒
 set ttimeoutlen=50
 
 " display cursor position
@@ -49,30 +47,26 @@ set ruler
 " 文件修改后自动重新读入
 set autoread
 
-" 不兼容vi模式
-set nocompatible
-
 
 "----------------------------------------------------------------------
-" search setting
+" 搜索设置
 "----------------------------------------------------------------------
 
 " ignore case when searching
 set ignorecase
 
-" smart search case delimiter
-" case is ignore by default, unless the search contains uppercase
+" 智能搜索大小写判断，默认忽略大小写，除非搜索内容包含大写字母
 set smartcase
 
 " highlight search content
 set hlsearch
 
-" dynamic incremental display of search results when input
+" 查找输入时动态增量显示查找结果
 set incsearch
 
 
 "----------------------------------------------------------------------
-" encoding setting
+" 编码设置
 "----------------------------------------------------------------------
 if has('multi_byte')
 	" internal work encoding
@@ -87,7 +81,7 @@ endif
 
 
 "----------------------------------------------------------------------
-" allow Vim's own script to auto set indent based on file type, etc
+" 允许 Vim 自带脚本根据文件类型自动设置缩进等
 "----------------------------------------------------------------------
 if has('autocmd')
 	filetype plugin indent on
@@ -95,7 +89,7 @@ endif
 
 
 "----------------------------------------------------------------------
-" syntax highlight setting
+" 语法高亮设置
 "----------------------------------------------------------------------
 if has('syntax')
 	syntax enable
@@ -104,13 +98,13 @@ endif
 
 
 "----------------------------------------------------------------------
-" other setting
+" 其他设置
 "----------------------------------------------------------------------
 
-" show matching brackets
+" 显示匹配的括号
 set showmatch
 
-" show the time when match
+" 显示括号匹配的时间
 set matchtime=2
 
 " show last line
@@ -130,35 +124,23 @@ set errorformat+=[%f:%l]\ ->\ %m,[%f:%l]:%m
 set listchars=tab:\|\ ,trail:.,extends:>,precedes:<
 
 
-" set tags: the current up to the root directory until find the .tags
-" or Vim's current directory contains a .tags file
+" 设置 tags：当前文件所在目录往上向根目录搜索直到碰到 .tags 文件
+" 或者 Vim 当前目录包含 .tags 文件
 set tags=./.tags;,.tags
 
-" if het Unicode is bigger than 255,
-" don't have to wait for the space to break
+" 如遇Unicode值大于255的文本，不必等到空格再折行
 set formatoptions+=m
 
-" don't add space in between when merging two lines of Chinese
+" 合并两行中文时，不在中间加空格
 set formatoptions+=B
 
-" file line breaks, defaults to unix line breaks
+" 文件换行符，默认使用 unix 换行符
 set ffs=unix,dos,mac
 
 
 "----------------------------------------------------------------------
-" fold setting
+" 折叠设置
 "----------------------------------------------------------------------
-" if has('folding')
-" 	" fold enable
-" 	set foldenable
-
-" 	" indentation by default
-" 	set fdm=indent
-
-" 	" open all indents by default
-" 	set foldlevel=99
-" endif
-
 " solve stuck when folding
 if has('folding')
     " 代码折叠
@@ -193,7 +175,7 @@ endif
 
 
 "----------------------------------------------------------------------
-" ignore the extensions when file searching and completing
+" 文件搜索和补全时忽略下面扩展名
 "----------------------------------------------------------------------
 set suffixes=.bak,~,.o,.h,.info,.swp,.obj,.pyc,.pyo,.egg-info,.class
 

@@ -81,10 +81,6 @@ endif
 nnoremap <tab>   <c-w>w
 nnoremap <S-tab> <c-w>W
 
-" Go to home and end using capitalized directions
-noremap H ^
-noremap L $
-
 " 调整缩进后自动选中，方便再次操作
 vnoremap < <gv
 vnoremap > >gv
@@ -92,9 +88,15 @@ vnoremap > >gv
 " 选中并高亮最后一次插入的内容
 nnoremap gv `[v`]`
 
+" 复制到行尾巴
 map Y y$
 
+" 冒号映射为封号
 noremap ; :
+
+" 交换' `
+nnoremap ' `
+nnoremap ` '
 
 " quickfix中按v/x分屏打开
 autocmd BufReadPost quickfix nnoremap <buffer> v <C-w><Enter><C-w>L
@@ -186,8 +188,8 @@ endif
 "----------------------------------------------------------------------
 " 缓存：插件 unimpaired 中定义了 [b, ]b 来切换缓存
 "----------------------------------------------------------------------
-noremap <silent> <leader>bn :bn<cr>
-noremap <silent> <leader>bp :bp<cr>
+noremap <silent> <space>bn :bn<cr>
+noremap <silent> <space>bp :bp<cr>
 noremap <silent> <space>bd :bd<CR>
 noremap <silent> <space>bk :bw<CR>
 
@@ -197,7 +199,7 @@ noremap <silent> <space>bk :bw<CR>
 " 其实还可以用原生的 CTRL+PageUp, CTRL+PageDown 来切换标签
 "----------------------------------------------------------------------
 
-noremap <silent> <c-t> :tabnew+Startify<cr>
+noremap <silent> <leader>tc :tabnew+Startify<cr>
 noremap <silent> <leader>tq :tabclose<cr>
 noremap <silent> <leader>tn :tabnext<cr>
 noremap <silent> <leader>tp :tabprev<cr>

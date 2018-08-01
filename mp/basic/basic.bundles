@@ -25,5 +25,5 @@ Plug 'tpope/vim-fugitive', { 'on': [] }
 call timer_start(400, 'FlyVim#defer#fugitive')
 
 " 显示文件类型图标
-" xshell下缩进有问题
+" NOTE: xshell下缩进有问题
 " Plug 'ryanoasis/vim-devicons'
