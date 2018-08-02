@@ -1,6 +1,6 @@
 if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
     let g:lightline = {
-                \ 'colorscheme': 'srcery_drk',
+                \ 'colorscheme': 'jellybeans',
                 \ 'separator': { 'left': '⮀', 'right': '⮂'  },
                 \ 'subseparator': { 'left': '⮁', 'right': '⮃'  },
                 \ 'active': {
