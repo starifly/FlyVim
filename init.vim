@@ -16,6 +16,10 @@ if empty($bundle_root)
 endif
 
 
+let mapleader = "\\"
+let maplocalleader = "\<Space>"
+
+
 " Platform
 let g:FlyVim = get(g:, 'FlyVim', {})
 let g:FlyVim.os = {}

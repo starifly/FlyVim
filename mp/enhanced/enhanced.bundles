@@ -75,7 +75,7 @@ Plug 'mileszs/ack.vim'
 Plug 'Yggdroot/indentLine'
 
 " 撤销树
-" Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 
 " 代码排版，格式化
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', '<Plug>(LiveEasyAlign)'] }

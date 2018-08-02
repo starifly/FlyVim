@@ -97,7 +97,8 @@ set backup
 set writebackup
 
 " 备份文件地址，统一管理
-set backupdir=~/.vim/tmp
+" set backupdir=~/.vim/tmp
+set backupdir=/var/tmp/vimbak
 
 " 备份文件扩展名
 set backupext=.bak
@@ -108,18 +109,28 @@ set noswapfile
 " 禁用 undo文件
 set noundofile
 
-" 创建目录，并且忽略可能出现的警告
-silent! call mkdir(expand('~/.vim/tmp'), "p", 0755)
-
-" 允许不保存buffer而切换buffer (w/o=without)
-set hidden
-
 " undo文件
 " set undolevels=1000 " How many undos
 " set undoreload=10000 " number of lines to save for undo
-" set undodir=~/.vim/undodir/
 " set undofile
-" silent! call mkdir(expand('~/.vim/undodir'), "p", 0755)
+" set undodir=/var/tmp/vimundo/
+" try
+"     set undodir=~/.vim/tmp/undodir
+"     set undofile
+" catch
+" endtry
+
+" 创建目录，并且忽略可能出现的警告
+" silent! call mkdir(expand('~/.vim/tmp/undodir'), "p", 0755)
+if !isdirectory(&backupdir)
+    silent! call mkdir(expand('/var/tmp/vimbak'), "p", 0755)
+endif
+" if !isdirectory(&undodir)
+"     silent! call mkdir(expand('/var/tmp/vimundo'), "p", 0755)
+" endif
+
+" 允许不保存buffer而切换buffer (w/o=without)
+set hidden
 
 
 " " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
