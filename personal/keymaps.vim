@@ -68,9 +68,9 @@ nnoremap <silent> # #zz
 " Open shell in vim
 "----------------------------------------------------------------------
 if has('nvim') || has('terminal')
-    map <space>' :terminal<CR>
+    map <localleader>' :terminal<CR>
 else
-    map <space>' :shell<CR>
+    map <localleader>' :shell<CR>
 endif
 
 
@@ -101,6 +101,9 @@ nnoremap ` '
 " quickfix中按v/x分屏打开
 autocmd BufReadPost quickfix nnoremap <buffer> v <C-w><Enter><C-w>L
 autocmd BufReadPost quickfix nnoremap <buffer> x <C-w><Enter><C-w>K
+
+" 切换粘贴模式
+set pastetoggle=<F6>
 
 
 "----------------------------------------------------------------------
@@ -188,10 +191,10 @@ endif
 "----------------------------------------------------------------------
 " 缓存：插件 unimpaired 中定义了 [b, ]b 来切换缓存
 "----------------------------------------------------------------------
-noremap <silent> <space>bn :bn<cr>
-noremap <silent> <space>bp :bp<cr>
-noremap <silent> <space>bd :bd<CR>
-noremap <silent> <space>bk :bw<CR>
+noremap <silent> <localleader>bn :bn<cr>
+noremap <silent> <localleader>bp :bp<cr>
+noremap <silent> <localleader>bd :bd<CR>
+noremap <silent> <localleader>bk :bw<CR>
 
 
 "----------------------------------------------------------------------
@@ -316,7 +319,7 @@ nnoremap <silent> <F7> :AsyncRun -cwd=<root> make <cr>
 nnoremap <silent> <F8> :AsyncRun -cwd=<root> -raw make run <cr>
 
 " F6 测试项目
-nnoremap <silent> <F6> :AsyncRun -cwd=<root> -raw make test <cr>
+" nnoremap <silent> <F6> :AsyncRun -cwd=<root> -raw make test <cr>
 
 " 更新 cmake
 nnoremap <silent> <F4> :AsyncRun -cwd=<root> cmake . <cr>
