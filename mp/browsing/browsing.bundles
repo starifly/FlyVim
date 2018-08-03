@@ -11,3 +11,5 @@ augroup END
 
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  ['NERDTreeToggle', 'NERDTreeFind'] }
+
+Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
