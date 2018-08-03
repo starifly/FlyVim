@@ -1,6 +1,6 @@
 if isdirectory(expand(FlyVimBundleDir("tagbar")))
-    nnoremap <silent> <leader>t :TagbarToggle<cr>
-    inoremap <silent> <leader>t <esc> :TagbarToggle<cr>
+    nnoremap <F4> :TagbarToggle<cr>
+    inoremap <F4> <esc> :TagbarToggle<cr>
     let g:tagbar_sort = 0
 endif
 

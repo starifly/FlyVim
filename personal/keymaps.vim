@@ -340,7 +340,7 @@ nnoremap <silent> <F8> :AsyncRun -cwd=<root> -raw make run <cr>
 " nnoremap <silent> <F6> :AsyncRun -cwd=<root> -raw make test <cr>
 
 " 更新 cmake
-nnoremap <silent> <F4> :AsyncRun -cwd=<root> cmake . <cr>
+" nnoremap <silent> <F4> :AsyncRun -cwd=<root> cmake . <cr>
 
 " Windows 下支持直接打开新 cmd 窗口运行
 if has('win32') || has('win64')
