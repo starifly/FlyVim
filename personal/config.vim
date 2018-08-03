@@ -135,8 +135,8 @@ set hidden
 
 " " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
 " " reference: https://github.com/w0rp/ale/issues/1689
-" set mouse=a
-" set ttymouse=xterm
+silent! set ttymouse=xterm
+set mouse=a
 " set selection=exclusive
 " set selectmode=mouse,key
 
