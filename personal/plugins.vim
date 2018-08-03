@@ -15,7 +15,7 @@
 if !exists('g:bundle_groups')
     let g:bundle_groups = []
     let g:bundle_groups += ['default', 'basic', 'tags', 'enhanced', 'filetypes', 'textobj']
-    let g:bundle_groups += ['appearance', 'nerdtree', 'ale', 'echodoc', 'leaderf', 'youcompleteme']
+    let g:bundle_groups += ['appearance', 'browsing', 'analysis', 'echodoc', 'leaderf', 'youcompleteme']
 endif
 
 
