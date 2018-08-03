@@ -1,3 +1,4 @@
 if isdirectory(expand(FlyVimBundleDir("vim-fugitive")))
-    nnoremap <silent> <Leader>df :Gdiff<CR>
+    nmap <leader>gs :Gstatus<CR>gg<c-n>
+    nnoremap <Leader>df :Gdiff<CR>
 endif
