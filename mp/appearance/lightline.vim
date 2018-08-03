@@ -52,7 +52,7 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
     function! LightlineFilename()
         let fname = expand('%:t')
         return fname == 'ControlP' && has_key(g:lightline, 'ctrlp_item') ? g:lightline.ctrlp_item :
-                    \ fname == '__Tagbar__' ? g:lightline.fname :
+                    \ fname =~ '__Tagbar__' ? "" :
                     \ fname =~ '__Gundo\|NERD_tree' ? '' :
                     \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
                     \ &ft == 'unite' ? unite#get_status_string() :
@@ -88,7 +88,7 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
 
     function! LightlineMode()
         let fname = expand('%:t')
-        return fname == '__Tagbar__' ? 'Tagbar' :
+        return fname =~ '__Tagbar__' ? 'Tagbar' :
                     \ fname == 'ControlP' ? 'CtrlP' :
                     \ fname == '__Gundo__' ? 'Gundo' :
                     \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
