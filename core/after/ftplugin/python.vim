@@ -63,7 +63,7 @@ let b:ale_fixers = [
             \]
 
 " docstring，优化输入
-let b:delimitMate_nesting_quotes = ['"']'"']
+let b:delimitMate_nesting_quotes = ['"']
 
 " python文件中输入新行时#号注释不切回行首
 inoremap # X<c-h>#
