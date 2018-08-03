@@ -143,8 +143,9 @@ set hidden
 
 " vim is often slow with long lines that are syntax highlighted, so limit to 200 characters in length"
 " set synmaxcol=200
+set synmaxcol=1000
 " http://vim.wikia.com/wiki/Speed_up_Syntax_Highlighting
-autocmd BufEnter * :syntax sync maxlines=200
+" autocmd BufEnter * :syntax sync maxlines=200
 
 
 "----------------------------------------------------------------------
