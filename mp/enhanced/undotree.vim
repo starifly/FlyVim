@@ -1,3 +1,3 @@
 if isdirectory(expand(FlyVimBundleDir("undotree")))
-    nnoremap <leader>u :UndotreeToggle<cr>
+    nnoremap <leader>ut :UndotreeToggle<cr>
 endif
