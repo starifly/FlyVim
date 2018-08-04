@@ -41,7 +41,7 @@ if isdirectory(expand(FlyVimBundleDir("ale")))
     " toggle quickfix list
     function! ToggleErrors()
         let old_last_winnr = winnr('$')
-        lclose
+        cclose
         if old_last_winnr == winnr('$')
             " Nothing was closed, open syntastic_error location panel
             copen
