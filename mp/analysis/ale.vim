@@ -35,13 +35,16 @@ if isdirectory(expand(FlyVimBundleDir("ale")))
     nmap <silent> <C-k> <Plug>(ale_previous_wrap)
     nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
+    let g:ale_set_loclist = 0
+    let g:ale_set_quickfix = 1
+
     " toggle quickfix list
     function! ToggleErrors()
         let old_last_winnr = winnr('$')
         lclose
         if old_last_winnr == winnr('$')
             " Nothing was closed, open syntastic_error location panel
-            lopen
+            copen
         endif
     endfunction
     nnoremap <localleader>s :call ToggleErrors()<cr>
