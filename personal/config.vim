@@ -140,7 +140,18 @@ set mouse=a
 " set selection=exclusive
 " set selectmode=mouse,key
 
+" InsertLeave时设置非粘贴模式
+au InsertLeave * silent! set nopaste
+
 set fillchars=vert:│
+
+if has("clipboard")
+    set clipboard=unnamed
+
+    if has("unnamedplus")
+        set clipboard+=unnamedplus
+    endif
+endif
 
 
 " vim is often slow with long lines that are syntax highlighted, so limit to 200 characters in length"
