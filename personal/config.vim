@@ -140,6 +140,8 @@ set mouse=a
 " set selection=exclusive
 " set selectmode=mouse,key
 
+set fillchars=vert:│
+
 
 " vim is often slow with long lines that are syntax highlighted, so limit to 200 characters in length"
 " set synmaxcol=200
