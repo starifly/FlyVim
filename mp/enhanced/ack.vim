@@ -8,12 +8,3 @@ if isdirectory(expand(FlyVimBundleDir("ack.vim")))
     endif
     nnoremap <localleader>F :Ack!<space>
 endif
-
-if executable('rg')
-    let &grepprg = 'rg -H --no-heading --vimgrep'
-elseif executable('ag')
-    let &grepprg = 'ag --nogroup --nocolor --column'
-else
-    let &grepprg = 'grep -rn $* *'
-endif
-command! -nargs=1 -bar Grep execute 'silent! grep! <q-args>' | redraw! | copen

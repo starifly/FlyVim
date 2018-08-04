@@ -123,6 +123,8 @@ map <Down> j
 " 切换粘贴模式
 set pastetoggle=<F6>
 
+command! -nargs=? Grep :call FlyVim#vim#grep#Grep(<q-args>)
+
 
 "----------------------------------------------------------------------
 " 命令模式的快速移动
@@ -322,7 +324,7 @@ let g:asyncrun_open = 6
 let g:asyncrun_bell = 1
 
 " 设置 F10 打开/关闭 Quickfix 窗口
-nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
+nnoremap <F10> :call asyncrun#quickfix_toggle(10)<cr>
 
 " F9 编译 C/C++ 文件
 nnoremap <silent> <F9> :AsyncRun gcc -Wall -O2 "$(VIM_FILEPATH)" -o "$(VIM_FILEDIR)/$(VIM_FILENOEXT)" <cr>
