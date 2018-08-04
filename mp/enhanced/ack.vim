@@ -10,7 +10,7 @@ if isdirectory(expand(FlyVimBundleDir("ack.vim")))
 endif
 
 if executable('rg')
-    let &greprg = 'rg -H --no-heading --vimgrep'
+    let &grepprg = 'rg -H --no-heading --vimgrep'
 elseif executable('ag')
     let &grepprg = 'ag --nogroup --nocolor --column'
 else
