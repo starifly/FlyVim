@@ -68,8 +68,8 @@ Plug 'terryma/vim-smooth-scroll'
 " 强化f和F键
 Plug 'rhysd/clever-f.vim', { 'on': [] }
 
-" ack
-Plug 'mileszs/ack.vim'
+" ack，用命令Grep
+" Plug 'mileszs/ack.vim'
 
 " indentLine
 Plug 'Yggdroot/indentLine'
