@@ -104,7 +104,7 @@ autocmd BufReadPost quickfix nnoremap <buffer> x <C-w><Enter><C-w>K
 
 " 代码折叠自定义快捷键 <leader>zz
 let g:FoldMethod = 0
-map <leader>zz :call ToggleFold()<cr>
+map <localleader>zz :call ToggleFold()<cr>
 fun! ToggleFold()
     if g:FoldMethod == 0
         exe "normal! zM"

@@ -1,4 +1,5 @@
 if isdirectory(expand(FlyVimBundleDir("ale")))
+            \   && has_key(g:plugs, 'ale')
     " let g:ale_linters_explicit = 1
 
     " 设定延迟和提示信息
@@ -43,6 +44,6 @@ if isdirectory(expand(FlyVimBundleDir("ale")))
             lopen
         endif
     endfunction
-    nnoremap <Leader>ew :call ToggleErrors()<cr>
+    nnoremap <localleader>s :call ToggleErrors()<cr>
 endif
 
