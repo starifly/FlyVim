@@ -86,7 +86,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " 选中并高亮最后一次插入的内容
-nnoremap gv `[v`]`
+nnoremap gv :normal! `[v`]<cr><left>`
 
 " 复制到行尾巴
 map Y y$
@@ -124,6 +124,17 @@ map <Down> j
 set pastetoggle=<F6>
 
 command! -nargs=? Grep :call FlyVim#vim#grep#Grep(<q-args>)
+
+" Zoom
+function! s:zoom()
+  if winnr('$') > 1
+    tab split
+  elseif len(filter(map(range(tabpagenr('$')), 'tabpagebuflist(v:val + 1)'),
+                  \ 'index(v:val, '.bufnr('').') >= 0')) > 1
+    tabclose
+  endif
+endfunction
+nnoremap <silent> <leader>z :call <sid>zoom()<cr>
 
 
 "----------------------------------------------------------------------
