@@ -10,7 +10,7 @@ call timer_start(600, 'FlyVim#defer#fzf')
 Plug 'asins/vim-dict'
 
 " 使用 :FlyGrep 命令进行实时 grep
-Plug 'wsdjeg/FlyGrep.vim'
+Plug 'wsdjeg/FlyGrep.vim', { 'on': 'FlyGrep' }
 
 " 使用 :CtrlSF 命令进行模仿 sublime 的 grep
 Plug 'dyng/ctrlsf.vim'

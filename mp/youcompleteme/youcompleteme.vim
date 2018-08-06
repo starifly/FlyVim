@@ -11,7 +11,7 @@ if isdirectory(expand(FlyVimBundleDir("YouCompleteMe")))
     let g:ycm_autoclose_preview_window_after_completion = 1
 
     " 禁用预览功能：扰乱视听
-    " let g:ycm_add_preview_to_completeopt = 0
+    let g:ycm_add_preview_to_completeopt = 0
 
     " 禁用诊断功能：我们用前面更好用的 ALE 代替
     let g:ycm_goto_buffer_command = 'horizontal-split'

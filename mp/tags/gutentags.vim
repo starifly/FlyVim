@@ -42,4 +42,15 @@ if isdirectory(expand(FlyVimBundleDir("vim-gutentags")))
     let g:gutentags_generate_on_new = 0
     let g:gutentags_generate_on_write = 1
     nnoremap <leader>tg :GutentagsUpdate<CR>
+
+    " let g:gutentags_plus_nomap = 1
+    " noremap <silent> <leader>cs :GscopeFind s <C-R><C-W><cr>
+    " noremap <silent> <leader>cg :GscopeFind g <C-R><C-W><cr>
+    " noremap <silent> <leader>cc :GscopeFind c <C-R><C-W><cr>
+    " noremap <silent> <leader>ct :GscopeFind t <C-R><C-W><cr>
+    " noremap <silent> <leader>ce :GscopeFind e <C-R><C-W><cr>
+    " noremap <silent> <leader>cf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>
+    " noremap <silent> <leader>ci :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>
+    " noremap <silent> <leader>cd :GscopeFind d <C-R><C-W><cr>
+    " noremap <silent> <leader>ca :GscopeFind a <C-R><C-W><cr>
 endif

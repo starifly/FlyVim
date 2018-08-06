@@ -68,9 +68,10 @@ nnoremap <silent> # #zz
 " Open shell in vim
 "----------------------------------------------------------------------
 if has('nvim') || has('terminal')
-    map <localleader>' :terminal<CR>
+    nnoremap <localleader>' :term<CR>
+    nnoremap <localleader>\ :rightbelow vert term<CR>
 else
-    map <localleader>' :shell<CR>
+    nnoremap <localleader>' :shell<CR>
 endif
 
 
