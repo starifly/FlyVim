@@ -1,20 +1,38 @@
 if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
     let g:lightline = {
-                \ 'colorscheme': 'jellybeans',
-                \ 'separator': { 'left': '⮀', 'right': '⮂'  },
-                \ 'subseparator': { 'left': '⮁', 'right': '⮃'  },
+                \ 'colorscheme': 'lightline_solarized',
+                \ 'separator': { 'left': '', 'right': ''  },
+                \ 'subseparator': { 'left': '', 'right': ''  },
                 \ 'active': {
                 \   'left': [ [ 'mode', 'paste' ],
                 \             [ 'fugitive', 'filename' ],
                 \             [ 'ctrlpmark' ] ],
                 \   'right': [ [ 'lineinfo' ],
-                \            [ 'percent' ],
-                \            [ 'filetype', 'fileencoding', 'fileformat' ],
-                \           [ 'linter_warnings', 'linter_errors', 'linter_ok'] ],
+                \              [ 'filetype', 'fileencoding', 'fileformat' ],
+                \              [ 'linter_warnings', 'linter_errors', 'linter_ok'] ],
                 \ },
-                \   'tabline': {
-                \       'left': [ ['buffers'] ],
-                \       'right': [ ['close'] ],
+                \ 'tabline': {
+                \   'left': [ [ 'bufferinfo' ],
+                \             [ 'separator' ],
+                \             [ 'bufferbefore', 'buffercurrent', 'bufferafter' ], ],
+                \   'right': [ [ 'close' ], ],
+                \ },
+                \ 'component_expand': {
+                \  'linter_checking': 'lightline#ale#checking',
+                \   'linter_warnings': 'LightlineLinterWarnings',
+                \   'linter_errors': 'LightlineLinterErrors',
+                \   'buffercurrent': 'lightline#buffer#buffercurrent',
+                \   'bufferbefore': 'lightline#buffer#bufferbefore',
+                \   'bufferafter': 'lightline#buffer#bufferafter',
+                \ },
+                \ 'component_type': {
+                \     'linter_checking': 'left',
+                \   'readonly': 'error',
+                \   'linter_warnings': 'warning',
+                \   'linter_errors': 'error',
+                \   'buffercurrent': 'tabsel',
+                \   'bufferbefore': 'raw',
+                \   'bufferafter': 'raw',
                 \ },
                 \ 'component_function': {
                 \   'fugitive': 'LightlineFugitive',
@@ -24,20 +42,11 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
                 \   'fileencoding': 'LightlineFileencoding',
                 \   'mode': 'LightlineMode',
                 \   'ctrlpmark': 'CtrlPMark',
+                \   'bufferinfo': 'lightline#buffer#bufferinfo',
                 \ },
-                \ 'component_expand': {
-                \  'linter_checking': 'lightline#ale#checking',
-                \   'linter_warnings': 'LightlineLinterWarnings',
-                \   'linter_errors': 'LightlineLinterErrors',
-                \   'buffers': 'lightline#bufferline#buffers',
-                \  'tabs': 'LightlineTabs',
-                \ },
-                \ 'component_type': {
-                \     'linter_checking': 'left',
-                \   'readonly': 'error',
-                \   'linter_warnings': 'warning',
-                \   'linter_errors': 'error',
-                \   'buffers': 'tabsel',
+                \ 'component': {
+                \   'separator': '',
+                \   'lineinfo': '%3p%%  %3l:%-2c',
                 \ },
                 \ }
 
@@ -50,6 +59,15 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
     endfunction
 
     function! LightlineFilename()
+        " if &filetype ==# 'qf'
+        "     let fname = 'qf'
+        " elseif &buftype ==# 'terminal'
+        "     let fname = ''
+        " elseif !&buflisted
+        "     let fname = 'ac'
+        " else
+        "     let fname = expand('%:t')
+        " endif
         let fname = expand('%:t')
         return fname == 'ControlP' && has_key(g:lightline, 'ctrlp_item') ? g:lightline.ctrlp_item :
                     \ fname =~ '__Tagbar__' ? "" :
@@ -167,38 +185,44 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
 
     " autocmd User ALELint call lightline#update()
 
-    let g:lightline#bufferline#show_number  = 1
-    let g:lightline#bufferline#shorten_path = 1
-    let g:lightline#bufferline#unnamed      = '[No Name]'
+    " lightline-buffer ui settings
+    " replace these symbols with ascii characters if your environment does not support unicode
+    let g:lightline_buffer_logo = ' '
+    let g:lightline_buffer_readonly_icon = ''
+    let g:lightline_buffer_modified_icon = '✭'
+    let g:lightline_buffer_git_icon = ' '
+    let g:lightline_buffer_ellipsis_icon = '..'
+    let g:lightline_buffer_expand_left_icon = '◀ '
+    let g:lightline_buffer_expand_right_icon = ' ▶'
+    let g:lightline_buffer_active_buffer_left_icon = ''
+    let g:lightline_buffer_active_buffer_right_icon = ''
+    let g:lightline_buffer_separator_icon = '  '
 
-    function! LightlineTabs() abort
-        let [x, y, z] = [[], [], []]
-        let nr = tabpagenr()
-        let cnt = tabpagenr('$')
-        for i in range(1, cnt)
-            call add(i < nr ? x : i == nr ? y : z,
-                        \ '%' . i . '%%{lightline#onetab(' . i . ',' . (i == nr) . ')}'
-                        \ . (i == cnt ? '%T' : ''))
-        endfor
-        if len(x) > 3
-            let x = x[len(x)-3:]
-            let x[0] = '<' . x[0]
-        endif
-        if len(z) > 3
-            let z = z[:2]
-            let z[len(z)-1] = z[len(z)-1] . '>'
-        endif
-        return [x, y, z]
-    endfunction
+    " enable devicons, only support utf-8
+    " require <https://github.com/ryanoasis/vim-devicons>
+    " let g:lightline_buffer_enable_devicons = 1
 
-    noremap <Leader>1 <Plug>lightline#bufferline#go(1)
-    noremap <Leader>2 <Plug>lightline#bufferline#go(2)
-    noremap <Leader>3 <Plug>lightline#bufferline#go(3)
-    noremap <Leader>4 <Plug>lightline#bufferline#go(4)
-    noremap <Leader>5 <Plug>lightline#bufferline#go(5)
-    noremap <Leader>6 <Plug>lightline#bufferline#go(6)
-    noremap <Leader>7 <Plug>lightline#bufferline#go(7)
-    noremap <Leader>8 <Plug>lightline#bufferline#go(8)
-    noremap <Leader>9 <Plug>lightline#bufferline#go(9)
-    noremap <Leader>0 <Plug>lightline#bufferline#go(10)
+    " lightline-buffer function settings
+    let g:lightline_buffer_show_bufnr = 1
+
+    " :help filename-modifiers
+    let g:lightline_buffer_fname_mod = ':t'
+
+    " hide buffer list
+    let g:lightline_buffer_excludes = ['vimfiler']
+
+    " max file name length
+    let g:lightline_buffer_maxflen = 30
+
+    " max file extension length
+    let g:lightline_buffer_maxfextlen = 3
+
+    " min file name length
+    let g:lightline_buffer_minflen = 16
+
+    " min file extension length
+    let g:lightline_buffer_minfextlen = 3
+
+    " reserve length for other component (e.g. info, close)
+    let g:lightline_buffer_reservelen = 20
 endif
