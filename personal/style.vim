@@ -44,6 +44,9 @@ set sidescroll=10
 set scrolloff=5
 " set scrolljump=2
 
+" change quickfix highlight
+hi QuickFixLine cterm=None
+
 
 "----------------------------------------------------------------------
 " 颜色主题：色彩文件位于 colors 目录中
