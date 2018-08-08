@@ -234,7 +234,8 @@ noremap <silent> <localleader>bk :bw<CR>
 " 其实还可以用原生的 CTRL+PageUp, CTRL+PageDown 来切换标签
 "----------------------------------------------------------------------
 
-noremap <silent> <leader>tc :tabnew+Startify<cr>
+" noremap <silent> <leader>tc :tabnew+Startify<cr>
+noremap <silent> <leader>tc :tabnew<cr>
 noremap <silent> <leader>tq :tabclose<cr>
 noremap <silent> <leader>tn :tabnext<cr>
 noremap <silent> <leader>tp :tabprev<cr>
