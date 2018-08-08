@@ -230,6 +230,21 @@ noremap <silent> <localleader>bk :bw<CR>
 
 
 "----------------------------------------------------------------------
+" <leader>+数字键 切换buffer
+"----------------------------------------------------------------------
+noremap <silent><leader>1 :b 1<cr>
+noremap <silent><leader>2 :b 2<cr>
+noremap <silent><leader>3 :b 3<cr>
+noremap <silent><leader>4 :b 4<cr>
+noremap <silent><leader>5 :b 5<cr>
+noremap <silent><leader>6 :b 6<cr>
+noremap <silent><leader>7 :b 7<cr>
+noremap <silent><leader>8 :b 8<cr>
+noremap <silent><leader>9 :b 9<cr>
+noremap <silent><leader>0 :b 10<cr>
+
+
+"----------------------------------------------------------------------
 " TAB：创建，关闭，上一个，下一个，左移，右移
 " 其实还可以用原生的 CTRL+PageUp, CTRL+PageDown 来切换标签
 "----------------------------------------------------------------------
