@@ -137,6 +137,9 @@ function! s:zoom()
 endfunction
 nnoremap <silent> <leader>z :call <sid>zoom()<cr>
 
+" window killer
+nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
+
 
 "----------------------------------------------------------------------
 " 命令模式的快速移动
