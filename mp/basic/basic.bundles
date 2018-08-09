@@ -21,8 +21,8 @@ Plug 'skywind3000/vim-preview', { 'on': [] }
 call timer_start(350, 'FlyVim#defer#basic2')
 
 " Git 支持
-Plug 'tpope/vim-fugitive', { 'on': [] }
-call timer_start(400, 'FlyVim#defer#fugitive')
+Plug 'tpope/vim-fugitive' ", { 'on': [] }
+" call timer_start(400, 'FlyVim#defer#fugitive')
 
 " 显示文件类型图标
 " NOTE: xshell下缩进有问题

@@ -8,8 +8,13 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
                 \             [ 'fugitive', 'filename' ],
                 \             [ 'ctrlpmark' ] ],
                 \   'right': [ [ 'lineinfo' ],
-                \              [ 'filetype', 'fileencoding', 'fileformat' ],
-                \              [ 'linter_warnings', 'linter_errors', 'linter_ok'] ],
+                \              [ 'fileencoding', 'fileformat' ],
+                \              [ 'linter_warnings', 'linter_errors', 'linter_ok'],
+                \              [ 'filetype' ] ],
+                \ },
+                \ 'inactive': {
+                \   'left': [ [ 'filename' ], ],
+                \   'right': [ [ 'lineinfo' ], ],
                 \ },
                 \ 'tabline': {
                 \   'left': [ [ 'bufferinfo' ],
@@ -24,6 +29,7 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
                 \   'buffercurrent': 'lightline#buffer#buffercurrent',
                 \   'bufferbefore': 'lightline#buffer#bufferbefore',
                 \   'bufferafter': 'lightline#buffer#bufferafter',
+                \   'bufferall': 'lightline#buffer#bufferall',
                 \ },
                 \ 'component_type': {
                 \     'linter_checking': 'left',
@@ -33,6 +39,7 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
                 \   'buffercurrent': 'tabsel',
                 \   'bufferbefore': 'raw',
                 \   'bufferafter': 'raw',
+                \   'bufferall': 'tabsel',
                 \ },
                 \ 'component_function': {
                 \   'fugitive': 'LightlineFugitive',
@@ -68,7 +75,7 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
         " else
         "     let fname = expand('%:t')
         " endif
-        let fname = expand('%:t')
+        let fname = expand('%:.')
         return fname == 'ControlP' && has_key(g:lightline, 'ctrlp_item') ? g:lightline.ctrlp_item :
                     \ fname =~ '__Tagbar__' ? "" :
                     \ fname =~ '__Gundo\|NERD_tree' ? '' :
@@ -187,7 +194,8 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
 
     " lightline-buffer ui settings
     " replace these symbols with ascii characters if your environment does not support unicode
-    let g:lightline_buffer_logo = ' '
+    " let g:lightline_buffer_logo = ' '
+    let g:lightline_buffer_logo = ''  " ' '
     let g:lightline_buffer_readonly_icon = ''
     let g:lightline_buffer_modified_icon = '✭'
     let g:lightline_buffer_git_icon = ' '
