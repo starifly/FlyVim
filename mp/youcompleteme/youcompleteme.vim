@@ -1,6 +1,6 @@
 if isdirectory(expand(FlyVimBundleDir("YouCompleteMe")))
     let g:ycm_confirm_extra_conf = 0
-    let g:ycm_global_ycm_extra_conf=$flyvim_root . '/tools/conf/.ycm_extra_conf.py'
+    let g:ycm_global_ycm_extra_conf=$FlyVim_Dir . '/tools/conf/.ycm_extra_conf.py'
 
     " let g:ycm_python_binary_path = 'python3'
 

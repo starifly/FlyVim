@@ -20,13 +20,13 @@ endif
 
 
 "----------------------------------------------------------------------
-" 在 ~/.vim/bundles 下安装插件
+" 在 ~/.vim/bundle 下安装插件
 "----------------------------------------------------------------------
 call plug#begin(FlyVimBundleDir(''))
 
 if exists('g:bundle_groups')
     for $bundle_group in g:bundle_groups
-        so $flyvim_root/mp/$bundle_group/$bundle_group.bundles
+        so $FlyVim_Dir/mp/$bundle_group/$bundle_group.bundles
     endfor
 endif
 

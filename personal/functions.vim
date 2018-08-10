@@ -10,7 +10,7 @@
 
 
 function! FlyVimBundleDir(bundlename)
-    return $bundle_root . "/bundle/" . a:bundlename
+    return $VIMHOME . "/bundle/" . a:bundlename
 endfunction
 
 function! SourceConfigsIn(dir)
