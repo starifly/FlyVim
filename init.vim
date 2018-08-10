@@ -7,17 +7,17 @@
 "
 "======================================================================
 
+if empty($flyvim_root)
+    let $flyvim_root = "~/.FlyVim"
+endif
+
+if empty($bundle_root)
+    let $bundle_root = "~/.vim"
+endif
+
+
 let mapleader = "\\"
 let maplocalleader = "\<Space>"
-
-
-if empty($FlyVim_Dir)
-    let $FlyVim_Dir = "$HOME/.FlyVim"
-endif
-
-if empty($VIMHOME)
-    let $VIMHOME = "$HOME/.vim"
-endif
 
 
 " Platform
@@ -32,12 +32,12 @@ let g:FlyVim.vim8 = exists('*job_start')
 let g:FlyVim.timer = exists('*timer_start')
 
 
-command! -nargs=1 LoadScript exec 'so '.$FlyVim_Dir.'/'.'<args>'
-set runtimepath+=$FlyVim_Dir/core
-set runtimepath+=$FlyVim_Dir/core/after
+command! -nargs=1 LoadScript exec 'so '.$flyvim_root.'/'.'<args>'
+set runtimepath+=$flyvim_root/core
+set runtimepath+=$flyvim_root/core/after
 
 " 将 ~/.vim 目录加入 runtimepath (有时候 vim 不会自动帮你加入）
-set rtp+=$HOME/.vim
+set rtp+=~/.vim
 
 if g:FlyVim.os.windows
   set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
