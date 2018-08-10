@@ -149,6 +149,8 @@ nnoremap <silent> <leader>r- :exe "vertical resize " . (winwidth(0) * 3/4)<CR>
 " balance windows
 nnoremap <silent> <leader>w= <C-w>=
 
+inoremap <silent> <CR> <C-O>=SmartEnter()<CR>
+
 
 "----------------------------------------------------------------------
 " 命令模式的快速移动

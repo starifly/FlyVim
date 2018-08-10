@@ -36,3 +36,12 @@ function! CloseWindowOrKillBuffer() "{{{
         bdelete
     endif
 endfunction "}}}
+
+" Make pressing Enter accept a completion entry.
+function! SmartEnter()
+    if pumvisible()
+        return "\<C-y>"
+    endif
+
+    return "\<CR>"
+endfunction
