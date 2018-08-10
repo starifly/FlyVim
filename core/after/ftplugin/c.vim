@@ -15,6 +15,9 @@ if executable('gcc') == 0 && executable('clang')
     let b:ale_linters.c += ['clang']
 endif
 
+let b:ale_fixers = ['clang-format']
+let b:ale_c_clangformat_options = '-style=file'
+
 " Let the matchit plugin know what items can be matched.
 if exists("loaded_matchit")
   let b:match_ignorecase=0
