@@ -220,7 +220,7 @@ aug InitFileTypesGroup
 	au FileType haskell setlocal et
 
 	" quickfix 隐藏行号
-	au FileType qf setlocal nonumber norelativenumber
+	" au FileType qf setlocal nonumber norelativenumber
 
 	" 强制对某些扩展名的 filetype 进行纠正
 	au BufNewFile,BufRead *.as setlocal filetype=actionscript
