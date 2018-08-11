@@ -1,5 +1,5 @@
 " 防止重复加载
-if exists("b:did_javascript_ftplugin")
+if exists('b:did_javascript_ftplugin')
     finish
 endif
 let b:did_javascript_ftplugin = 1

@@ -1,5 +1,5 @@
 " 防止重复加载
-if exists("b:did_lua_ftplugin")
+if exists('b:did_lua_ftplugin')
     finish
 endif
 let b:did_lua_ftplugin = 1
