@@ -51,6 +51,7 @@ nnoremap <m-Q> :qa!<cr>
 " save
 nnoremap <m-w> :update<cr>
 inoremap <m-w> <C-O>:update<cr>
+nnoremap <m-W> :wqa<cr>
 
 
 "----------------------------------------------------------------------
@@ -149,7 +150,7 @@ nnoremap <silent> <leader>r- :exe "vertical resize " . (winwidth(0) * 3/4)<CR>
 " balance windows
 nnoremap <silent> <leader>w= <C-w>=
 
-inoremap <silent> <CR> <C-O>=SmartEnter()<CR>
+inoremap <silent> <CR> <C-R>=SmartEnter()<CR>
 
 
 "----------------------------------------------------------------------

@@ -11,4 +11,5 @@ setlocal nobuflisted
 setlocal nonumber
 setlocal norelativenumber
 
-map <buffer> q :q<Return>
+" map <buffer> q :q<Return>
+nnoremap <buffer> q :ccl<cr>:lcl<cr>
