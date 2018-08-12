@@ -12,5 +12,12 @@ function! CloseHelpFilesWithQ() abort
     endif
 endfunction
 
+" Open links with enter
+nnoremap <buffer> <CR> <C-]>
+
+" Jump back with backspace
+nnoremap <buffer> <BS> <C-T>
+
+
 " Quit help windows by just pressing q
 nnoremap <buffer> <silent> q :call CloseHelpFilesWithQ()<CR>
