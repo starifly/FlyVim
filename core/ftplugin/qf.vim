@@ -13,3 +13,7 @@ setlocal norelativenumber
 
 " map <buffer> q :q<Return>
 nnoremap <buffer> q :ccl<cr>:lcl<cr>
+
+" quickfix中按v/x分屏打开
+nnoremap <buffer> v <C-w><Enter><C-w>L
+nnoremap <buffer> x <C-w><Enter><C-w>K

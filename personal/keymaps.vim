@@ -100,10 +100,6 @@ noremap ; :
 nnoremap ' `
 nnoremap ` '
 
-" quickfix中按v/x分屏打开
-autocmd BufReadPost quickfix nnoremap <buffer> v <C-w><Enter><C-w>L
-autocmd BufReadPost quickfix nnoremap <buffer> x <C-w><Enter><C-w>K
-
 " 代码折叠自定义快捷键 <leader>zz
 let g:FoldMethod = 0
 map <localleader>zz :call ToggleFold()<cr>
