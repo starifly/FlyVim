@@ -26,3 +26,6 @@ if exists("loaded_matchit")
         \ ',\<switch\>:\<case\>:\<default\>' .
         \ ',\<do\>:\<while\>'
 endif
+
+" C/C++ 文件使用 // 作为注释
+setlocal commentstring=//\ %s
