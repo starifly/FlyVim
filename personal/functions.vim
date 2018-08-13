@@ -6,7 +6,7 @@
 " URL: https://github.com/if2012/FlyVim
 "
 "======================================================================
-" vim: set ts=4 sw=4 tw=78 noet :
+" vim: set ts=4 sw=4 tw=78 et :
 
 
 function! FlyVimBundleDir(bundlename)
