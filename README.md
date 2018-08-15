@@ -1,5 +1,7 @@
 # FlyVim
 
+## Install
+
 #### Quick Install
 
 ```bash
@@ -13,3 +15,7 @@ $ cd ~/.FlyVim
 $ make vim     # install FlyVim for Vim
 $ make neovim  # install FlyVim for NeoVim
 ```
+
+## 致谢
+
+本配置基于 [vim-init](https://github.com/skywind3000/vim-init) 修改，感谢！
