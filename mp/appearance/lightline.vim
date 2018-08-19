@@ -134,7 +134,7 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
                     \ &ft == 'unite' ? 'Unite' :
                     \ &ft == 'vimfiler' ? 'VimFiler' :
                     \ &ft == 'vimshell' ? 'VimShell' :
-                    \ winwidth(0) > 60 ? lightline#mode() : ''
+                    \ lightline#mode()
     endfunction
 
     function! CtrlPMark()
