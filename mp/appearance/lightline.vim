@@ -56,7 +56,6 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
                 \ },
                 \ 'component_function': {
                 \   'fugitive': 'LightlineFugitive',
-                \   'filename': 'LightlineFilename',
                 \   'fileformat': 'LightlineFileformat',
                 \   'filetype': 'LightlineFiletype',
                 \   'fileencoding': 'LightlineFileencoding',
@@ -67,6 +66,7 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
                 \ 'component': {
                 \   'separator': '',
                 \   'lineinfo': '%3p%%  %3l:%-2c',
+                \   'filename': '%<%{LightlineFilename()}',
                 \ },
                 \ }
 
