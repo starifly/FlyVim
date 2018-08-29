@@ -113,6 +113,9 @@ fun! ToggleFold()
     endif
 endfun
 
+nnoremap j gj
+nnoremap k gk
+
 map <Left> h
 map <Right> l
 map <Up> k
