@@ -1,5 +1,8 @@
 # FlyVim
 
+
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/starifly/FlyVim/blob/master/LICENSE)
+
 ## Install
 
 #### Quick Install
