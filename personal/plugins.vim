@@ -3,7 +3,7 @@
 " plugins.vim -
 "
 " Created: 2018-07-23
-" URL: https://github.com/if2012/FlyVim
+" URL: https://github.com/starifly/FlyVim
 "
 "======================================================================
 " vim: set ts=4 sw=4 tw=78 et :

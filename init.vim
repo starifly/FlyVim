@@ -3,7 +3,7 @@
 " init.vim - initialize config
 "
 " Created: 2018-07-23
-" From: https://github.com/if2012/FlyVim
+" From: https://github.com/starifly/FlyVim
 "
 "======================================================================
 

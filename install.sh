@@ -3,7 +3,7 @@
 set -eo pipefail
 
 app_name="FlyVim"
-repo_uri="https://github.com/if2012/FlyVim.git"
+repo_uri="https://github.com/starifly/FlyVim.git"
 repo_name="FlyVim"
 repo_path="$HOME/.FlyVim"
 repo_branch="master"
