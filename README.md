@@ -14,12 +14,12 @@ $ bash <(curl -fsSL https://git.io/fAl8K)
 #### Manual
 
 ```bash
-$ git clone https://github.com/starifly/FlyVim ~/.FlyVim
+$ git clone git@github.com:starifly/FlyVim.git ~/.FlyVim
 $ cd ~/.FlyVim
 $ make vim     # install FlyVim for Vim
 $ make neovim  # install FlyVim for NeoVim
 ```
 
-## 致谢
+## Thanks
 
-本配置基于 [vim-init](https://github.com/skywind3000/vim-init) 修改，感谢！
+This config is based on [vim-init](https://github.com/skywind3000/vim-init), thanks very much!
