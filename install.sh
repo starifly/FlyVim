@@ -77,7 +77,7 @@ sync_repo() {
     ret="$?"
     success "Successfully updated $repo_name"
   fi
-  if [ ! -z "$_update" ]; then
+  if [ -n "$_update" ]; then
     exit 0;
   fi
 }
