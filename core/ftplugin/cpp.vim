@@ -16,4 +16,4 @@ if executable('gcc') == 0 && executable('clang')
 endif
 
 let b:ale_fixers = ['clang-format']
-let g:ale_cpp_clangformat_options = '-style=file:' . expand('~/.FlyVim/tools/conf/.clang-format')
+let g:ale_cpp_clangformat_options = '-style=file:' . $FlyVim_Dir . '/tools/conf/.clang-format'
