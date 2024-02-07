@@ -175,15 +175,15 @@ infer() {
 }
 
 install() {
-  if [ ! -z "$_all" ]; then
+  if [ -n "$_all" ]; then
     install_for_vim
     install_for_neovim
     return
   fi
-  if [ ! -z "$_vim" ]; then
+  if [ -n "$_vim" ]; then
     install_for_vim
   fi
-  if [ ! -z "$_neovim" ]; then
+  if [ -n "$_neovim" ]; then
     install_for_neovim
   fi
   infer
