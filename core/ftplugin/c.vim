@@ -16,7 +16,7 @@ if executable('gcc') == 0 && executable('clang')
 endif
 
 let b:ale_fixers = ['clang-format']
-let b:ale_c_clangformat_options = '-style="{BasedOnStyle: Google, IndentWidth: 4}"'
+let b:ale_c_clangformat_options = '-style=file:' . expand('~/.FlyVim/tools/conf/.clang-format')
 
 " Let the matchit plugin know what items can be matched.
 if exists("loaded_matchit")
