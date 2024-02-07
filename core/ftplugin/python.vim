@@ -55,10 +55,9 @@ endif
 "             \   'remove_trailing_lines',
 "             \]
 
-let b:ale_linters = ['flake8']
+let b:ale_linters = ['ruff']
 let b:ale_fixers = [
             \   'remove_trailing_lines',
-            \   'isort',
             \   'yapf',
             \]
 

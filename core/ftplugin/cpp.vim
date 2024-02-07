@@ -15,3 +15,5 @@ if executable('gcc') == 0 && executable('clang')
     let b:ale_linters.cpp += ['clang']
 endif
 
+let b:ale_fixers = ['clang-format']
+let b:ale_cpp_clangformat_options = '-style="{BasedOnStyle: Google, IndentWidth: 4}"'
