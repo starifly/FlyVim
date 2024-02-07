@@ -1,6 +1,6 @@
 # FlyVim
 
-[![Build Status](https://travis-ci.org/starifly/FlyVim.svg?branch=master)](https://travis-ci.org/starifly/FlyVim)
+[![Build Status](https://github.com/starifly/FlyVim/workflows/ci/badge.svg)](https://github.com/starifly/FlyVim/actions)
 [![GitHub](https://img.shields.io/badge/vim-8.1+-blue.svg)](https://github.com/vim/vim)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/starifly/FlyVim/blob/master/LICENSE)
 
