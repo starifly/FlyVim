@@ -1,4 +1,6 @@
-# FlyVim
+<div align="center">
+ <h1> FlyVim </h1>
+</div>
 
 [![Linux](https://img.shields.io/badge/Linux-%23.svg?style=flat-square&logo=linux&color=FCC624&logoColor=black)]()
 [![macOS](https://img.shields.io/badge/macOS-%23.svg?style=flat-square&logo=apple&color=000000&logoColor=white)]()
@@ -9,12 +11,19 @@
 
 ## Installation
 
-#### Quick Install
+### Prerequisites
+
+- Vim >= 8.1
+- python3
+- `apt install clang-format gcc cppcheck shfmt shellcheck global universal-ctags ripgrep` 
+- `pip install ruff yapf`
+
+### Quick Install
 
 ```bash
 $ bash <(curl -fsSL https://git.io/fAl8K)
 ```
-#### Manual
+### Manual
 
 ```bash
 $ git clone git@github.com:starifly/FlyVim.git ~/.FlyVim
