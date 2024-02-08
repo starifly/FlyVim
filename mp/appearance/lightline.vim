@@ -210,6 +210,9 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
 
     " autocmd User ALELint call lightline#update()
 
+    nnoremap <C-Left> :bprev<CR>
+    nnoremap <C-Right> :bnext<CR>
+
     " lightline-buffer ui settings
     " replace these symbols with ascii characters if your environment does not support unicode
     " let g:lightline_buffer_logo = ' '
