@@ -26,4 +26,4 @@ Plug 'tpope/vim-fugitive' ", { 'on': [] }
 
 " 显示文件类型图标
 " NOTE: xshell下缩进有问题
-" Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'

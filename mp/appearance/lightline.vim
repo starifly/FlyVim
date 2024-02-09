@@ -101,9 +101,9 @@ if isdirectory(expand(FlyVimBundleDir("lightline.vim")))
 
     function! LightlineFugitive()
         try
-            if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
+            if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*FugitiveHead')
                 let mark = '⭠ '  " edit here for cool mark
-                let branch = fugitive#head()
+                let branch = FugitiveHead()
                 return branch !=# '' ? mark.branch : ''
             endif
         catch

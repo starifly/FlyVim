@@ -99,3 +99,7 @@ call timer_start(800, 'FlyVim#defer#whitespace')
 " Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
 
 " Plug 'sarrow104/simple-cmake.vim'
+
+" 浮动终端
+" Plug 'voldikss/vim-floaterm', { 'on': 'FloatermToggle' }
+Plug 'voldikss/vim-floaterm'
