@@ -101,5 +101,4 @@ call timer_start(800, 'FlyVim#defer#whitespace')
 " Plug 'sarrow104/simple-cmake.vim'
 
 " 浮动终端
-" Plug 'voldikss/vim-floaterm', { 'on': 'FloatermToggle' }
-Plug 'voldikss/vim-floaterm'
+Plug 'voldikss/vim-floaterm', { 'on': 'FloatermToggle' }
