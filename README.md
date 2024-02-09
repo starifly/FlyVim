@@ -74,6 +74,13 @@ $ make vim     # install FlyVim for Vim
 $ make neovim  # install FlyVim for NeoVim
 ```
 
+## Update
+
+```bash
+$ cd .FlyVim
+$ make update
+```
+
 ## Full Installation Guide
 
 <https://github.com/starifly/FlyVim/wiki/Full-Installation-Guide>
