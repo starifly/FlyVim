@@ -15,37 +15,31 @@
     <img src="https://raw.githubusercontent.com/starifly/FlyVim/master/assets/nerd-tagbar.png" alt="Nerdtree & Tagbar">
     <em>Nerdtree & Tagbar</em>
 </p>
-<br>
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/starifly/FlyVim/master/assets/preview.png" alt="Preview">
     <em>Preview</em>
 </p>
-<br>
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/starifly/FlyVim/master/assets/auto-complete.png" alt="Auto Complete">
     <em>Auto Complete</em>
 </p>
-<br>
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/starifly/FlyVim/master/assets/syntax-check.png" alt="Syntax Check">
     <em>Syntax Check</em>
 </p>
-<br>
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/starifly/FlyVim/master/assets/float-term.png" alt="Float Term">
     <em>Float Term</em>
 </p>
-<br>
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/starifly/FlyVim/master/assets/window-choose.png" alt="Window Choose">
     <em>Window Choose</em>
 </p>
-<br>
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/starifly/FlyVim/master/assets/F2-search.png" alt="F2 Search">
